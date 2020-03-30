@@ -1,5 +1,31 @@
-h1 {
-	color: red;
-	font-size: 60px;
-	background: blue;
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+/* NAV */
+.navi {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+}
+.navi li {
+	display: inline-block;
+	padding: 0 15px 0 15px;
+}
+
+/* SPLASH */
+
+.container {
+	max-width: 100%;
+	padding: 0;
+	height: 100vh;
+	background-image: url(../images/wallet.jpeg);
+	background-position: center center;
+	object-fit: cover;
 }
