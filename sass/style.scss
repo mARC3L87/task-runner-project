@@ -3,29 +3,131 @@
 *, *::before, *::after {
 	box-sizing: border-box;
 }
+$font-golden: 'Great Vibes', cursive;
+$font-text: 'Roboto', sans-serif;
+$font-title: 'Playfair Display', serif;
+
+/* GLOBAL */
+
 
 body {
 	margin: 0;
+	font-family: $font-text;
+}
+.section-title {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 30px 0;
 }
 
-/* NAV */
-.navi {
-	list-style-type: none;
+/* ROW */
+.container .col-md-4 {
+	margin-left: 90px;
+	display: flex;
+	padding: 0;
+}
+.container h6 {
+	margin: 20px 0 0 0;
+	font-size: 40px;
+	font-family: $font-golden;
+	color: #ff9f43;
+}
+.container .col-md-6 {
 	display: flex;
 	justify-content: flex-end;
+	margin-top: 25px;
+	margin-right: 90px;
+	padding: 0;
+}
+/* NAV */
+.navi {
+	font-family: $font-text;
+	color: white;
+	font-style: 22px;
+	margin: 0;
+	list-style-type: none;
+	/*display: flex;
+	justify-content: flex-end;*/
 }
 .navi li {
 	display: inline-block;
 	padding: 0 15px 0 15px;
 }
 
-/* SPLASH */
+/* HEADER */
 
 .container {
 	max-width: 100%;
 	padding: 0;
 	height: 100vh;
+	
+	
+}
+.sp-img {
 	background-image: url(../images/wallet.jpeg);
 	background-position: center center;
-	object-fit: cover;
+	background-size: cover;
+	position: relative;
+	height: 100%;
+}
+.inner-splash {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+}
+.inner-splash h1 {
+	font-size: 60px;
+	font-family: $font-title;
+	font-style: italic;
+	font-weight: 300;
+	color: white;
+	margin: 0 0 20px 0;
+}
+.inner-splash h2 {
+	font-size: 100px;
+	color: white;
+	margin: 0 0 60px 0;
+}
+.inner-splash a {
+	text-decoration: none;
+	color: white;
+	font-size: 30px;
+	background: #f6e58d;
+	padding: 30px 30px;
+	border-radius: 5px;
+}
+
+/* Services */
+.services {
+	margin: 50px 90px;
+	h1 {
+		margin: auto;
+		padding-bottom: 10px;
+		font-size: 35px;
+		font-family: $font-text;
+
+	}
+	p {
+		margin: auto;
+		font-size: 20px;
+	}
+}
+.card-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	i {
+		font-size: 60px;
+    	color: orange;
+    	border: 3px solid;
+    	height: 100px;
+    	width: 100px;
+    	text-align: center;
+    	padding: 15px 0;
+    	border-radius: 50%;
+	}
 }
