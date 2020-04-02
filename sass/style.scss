@@ -17,6 +17,10 @@ body {
 section {
 	margin: 90px 50px;
 }
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
 /* HEADER */
 
 .container {
@@ -212,20 +216,87 @@ section {
 }
 /* MEDIA */
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
 	.container .col-md-6 {
 		margin-top: 30px;
 		margin-right: 0;
 		padding: 0;
 }
+.container .col-md-4 {
+	margin-left: 20px;
+}
 .navi li {
 	display: flex;
-	padding: 0 5px;
-	margin: 0 50px;
+	padding: 2px 5px;
+	margin: 0 20px;
+}
+.inner-splash {
+	h1 {
+		font-size: 30px;
+	}
+	h2 {
+		font-size: 50px;
+	}
+	a {
+		font-size: 20px;
+		padding: 30px 10px;
+		position: absolute;
+		transform: translateX(-50%);
+		width: 200px;
+	}
+}
+.portfolio {
+	padding: 100px 50px;
+	.section-title {
+		text-align: center;
+	}
+}
+.card-box {
+	img {
+		height: 250px;
+	}
 }
 .footer {
+	margin: 90px 0 0;
+	.row {
+		flex-direction: column-reverse;
+	}
+	h6 {
+		font-size: 15px;
+		text-align: center;
+	}
 	.col-md-6 {
 		flex-direction: column;
+	}
+	ul {
+		margin: auto;
+		padding: 0;
+	}
+}
+}
+@media (min-width: 768px) {
+	.container {
+		.col-md-6 {
+			margin-right: 0;
+		}
+	}
+	.navi li {
+	padding-bottom: 5px; 
+}
+.footer {
+	.row {
+		flex-direction: row;
+		align-items: center;
+	}
+	col-md-4 {
+		text-align: center;
+	}
+	h6 {
+		font-size: 15px;
+		width: 300px;
+	}
+	col-md-6 {
+		justify-content: center;
 	}
 }
 }
